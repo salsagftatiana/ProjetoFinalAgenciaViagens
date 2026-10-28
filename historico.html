@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórico de viagens — Sonhos em Viagem</title>
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="historico.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <a class="logo-icone" href="index.html" aria-label="Sonhos em Viagem"><img src="assets/logo.png" alt="Sonhos em Viagem"></a>
+    <div class="links">
+      <a href="index.html">Início</a><a href="pacotes.html">Pacotes</a>
+      <a href="agendar-viagem.html">Agendar</a><a class="active" href="historico.html">Histórico</a><a href="conta.html">Conta</a>
+    </div>
+  </nav>
+  <main class="historico-container">
+    <h1>As minhas viagens registadas</h1>
+    <p id="userEmail"></p>
+    <p>Consulte os seus agendamentos. Esta informação fica guardada na sua conta.</p>
+    <hr>
+    <p id="historicoFeedback" role="status">A carregar histórico…</p>
+    <div id="lista-viagens" class="grid-viagens" aria-live="polite"></div>
+  </main>
+  <footer><p class="copy">&copy; 2026 — Programação Web (Frontend)</p></footer>
+  <script type="module" src="historico.js"></script>
+</body>
+</html>
+
+

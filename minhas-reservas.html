@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas Reservas</title>
+  <link rel="stylesheet" href="firebase.css">
+  <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+  <nav class="top-nav">
+    <a class="logo-icone" href="index.html" aria-label="Sonhos em Viagem"><img src="assets/logo.png"
+        alt="Sonhos em Viagem"></a>
+    <div class="links">
+      <a href="index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 10.8 12 3l9 7.8v9.1c0 .6-.5 1.1-1.1 1.1h-5.1v-6.2H9.2V21H4.1C3.5 21 3 20.5 3 19.9v-9.1Z" />
+          <path d="M1.8 11.7 12 2.8l10.2 8.9" />
+        </svg><span>Início</span></a>
+      <a href="pacotes.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8 7V5.7C8 3.7 9.7 2 11.7 2h.6C14.3 2 16 3.7 16 5.7V7" />
+          <rect x="4" y="7" width="16" height="14" rx="2" />
+          <path d="M8 7v14M16 7v14" />
+        </svg><span>Pacotes</span></a>
+      <a href="conta.html?next=agendar-viagem.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="4" y="5" width="16" height="16" rx="2" />
+          <path d="M8 3v4M16 3v4M4 10h16M8 14h2M12 14h2M16 14h2M8 18h2M12 18h2" />
+        </svg><span>Agendar</span></a>
+      <a class="active" href="conta.html?next=agendar-viagem.html"><svg class="ico user" viewBox="0 0 24 24"
+          aria-hidden="true">
+          <circle cx="12" cy="7" r="4" />
+          <path d="M4 21c.8-4.4 4-7 8-7s7.2 2.6 8 7Z" />
+        </svg><span>Registar</span></a>
+    </div>
+  </nav>
+  <header class="dash-header">
+    <div>
+      <h1>Minhas Reservas</h1>
+      <p id="userEmail"></p>
+    </div>
+    <nav><a href="index.html">Início</a><a href="agendar-viagem.html">Nova reserva</a><button id="logoutBtn">Sair</button>
+    </nav>
+  </header>
+  <main class="dashboard">
+    <section class="filters"><input id="searchInput" placeholder="Pesquisar por nome, destino ou cidade"><select
+        id="estadoFiltro">
+        <option value="">Todos os estados</option>
+        <option>Pendente</option>
+        <option>Confirmada</option>
+        <option>Cancelada</option>
+      </select></section>
+    <p id="dashFeedback" class="feedback"></p>
+    <section id="reservasList" class="cards"></section>
+  </main>
+  <dialog id="editDialog">
+    <form id="editForm" method="dialog">
+      <h2>Editar reserva</h2><input type="hidden" id="editId"><label>Nome</label><input id="editNome"
+        required><label>Destino</label><input id="editDestino" required><label>Cidade</label><input id="editCidade"
+        required><label>Estado</label><select id="editEstado">
+        <option>Pendente</option>
+        <option>Confirmada</option>
+        <option>Cancelada</option>
+      </select>
+      <menu><button value="cancel">Cancelar</button><button id="saveEdit" value="default">Guardar</button></menu>
+    </form>
+  </dialog>
+  <script type="module" src="dashboard.js"></script>
+</body>
+
+</html>
+

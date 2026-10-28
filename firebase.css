@@ -1,0 +1,260 @@
+﻿@import url('nav.css');
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(rgba(255, 255, 255, .82), rgba(255, 255, 255, .82)), url('assets/hero-lago.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #092f46;
+  font-family: Arial, sans-serif
+}
+
+.form-viagem,
+.form-text,
+.auth-card,
+.dashboard-card {
+  background: rgba(255, 255, 255, .96);
+  padding: 30px 38px;
+  border-radius: 14px;
+  box-shadow: var(--sombra);
+  width: min(430px, 92%);
+  margin: 42px auto 24px
+}
+
+.titulo,
+.form-viagem h1,
+.auth-card h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  text-align: center;
+  color: #092f46;
+  margin: 0 0 24px;
+  font-size: 28px
+}
+
+.form-viagem label,
+.form-text label,
+.auth-card label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 700;
+  color: #092f46
+}
+
+.form-viagem input,
+.form-viagem select,
+.form-text input,
+.auth-card input,
+.form-viagem textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccd6df;
+  border-radius: 8px;
+  min-height: 38px;
+  margin-bottom: 10px
+}
+
+button,
+.button,
+.Submeter,
+.seguinte,
+.extras,
+.botao-saber-mais {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: #05344a;
+  color: #fff !important;
+  border: none;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 8px
+}
+
+.secondary {
+  background: #8aa1ad
+}
+
+.feedback {
+  font-weight: 700;
+  color: #087c38
+}
+
+.feedback.erro {
+  color: #b00020
+}
+
+.copy {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  color: #092f46;
+  margin: 20px
+}
+
+.telefone-container {
+  display: flex;
+  gap: 10px
+}
+
+.telefone-container select {
+  max-width: 125px
+}
+
+.bloco-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+
+.opcao-linha,
+.servico {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start
+}
+
+.opcao-linha input,
+.servico input {
+  width: auto;
+  min-height: auto
+}
+
+.pax-box {
+  background: #fff;
+  border: 1px solid #ccd6df;
+  padding: 12px;
+  border-radius: 8px
+}
+
+.pax-summary {
+  border: 1px solid #ccd6df;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer
+}
+
+.pax-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px
+}
+
+.pax-row select {
+  width: 110px
+}
+
+.sub {
+  font-size: 12px;
+  color: #697b88
+}
+
+.divider {
+  height: 1px;
+  background: #eee;
+  margin: 10px 0
+}
+
+.page-note {
+  text-align: center;
+  margin-top: -12px;
+  margin-bottom: 16px;
+  color: #52616b
+}
+
+.bgvideo {
+  display: none
+}
+
+body.auth-page {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(151, 207, 239, .42), transparent 28%),
+    radial-gradient(circle at 88% 82%, rgba(111, 180, 223, .34), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #f8fcff 48%, #eaf6ff 100%) !important;
+  color: #092f46;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, .97) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 30px rgba(5, 52, 74, .14) !important;
+  width: min(430px, 92%) !important;
+  margin: 48px auto 24px !important;
+  padding: 32px 38px !important;
+}
+
+.auth-card-wide {
+  width: min(760px, 92%) !important;
+}
+
+.auth-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 24px;
+  text-align: left;
+}
+
+.auth-grid h2 {
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.register-section {
+  border-left: 1px solid #ccd6df;
+  padding-left: 28px;
+}
+
+@media (max-width: 620px) {
+  .auth-grid { grid-template-columns: 1fr; }
+  .register-section { border-left: 0; border-top: 1px solid #ccd6df; padding: 24px 0 0; }
+}
+
+.auth-card h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #092f46;
+  text-align: center;
+  font-size: 28px;
+  margin: 0 0 12px
+}
+
+.auth-card p {
+  text-align: center;
+  line-height: 1.45;
+  color: #273d4d
+}
+
+.auth-card input {
+  border-radius: 8px;
+  border: 1px solid #ccd6df;
+  min-height: 40px;
+  padding: 10px 12px
+}
+
+.auth-card button {
+  background: #05344a !important;
+  border-radius: 8px !important;
+  font-weight: 800 !important
+}
+
+.auth-card a {
+  color: #006eea;
+  font-weight: 700;
+  text-decoration: none
+}
+
+.auth-card a.voltar-inicio {
+  text-decoration: underline;
+}
+
+.feedback {
+  text-align: center
+}

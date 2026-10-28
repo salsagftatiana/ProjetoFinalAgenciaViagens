@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar viagem — Sonhos em Viagem</title>
+  <link rel="stylesheet" href="agendar-viagem.css">
+  <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+  <nav class="top-nav">
+    <a class="logo-icone" href="index.html"><img src="assets/logo.png" alt="Sonhos em Viagem"></a>
+    <div class="links">
+      <a href="index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 10.8 12 3l9 7.8v9.1c0 .6-.5 1.1-1.1 1.1h-5.1v-6.2H9.2V21H4.1C3.5 21 3 20.5 3 19.9v-9.1Z" />
+          <path d="M1.8 11.7 12 2.8l10.2 8.9" />
+        </svg><span>Início</span></a>
+      <a href="pacotes.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8 7V5.7C8 3.7 9.7 2 11.7 2h.6C14.3 2 16 3.7 16 5.7V7" />
+          <rect x="4" y="7" width="16" height="14" rx="2" />
+          <path d="M8 7v14M16 7v14" />
+        </svg><span>Pacotes</span></a>
+      <a class="active" href="agendar-viagem.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="4" y="5" width="16" height="16" rx="2" />
+          <path d="M8 3v4M16 3v4M4 10h16M8 14h2M12 14h2M16 14h2M8 18h2M12 18h2" />
+        </svg><span>Agendar</span></a>
+      <a href="historico.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 7v5l3 2" />
+        </svg><span>Histórico</span></a>
+      <a href="conta.html"><svg class="ico user" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="7" r="4" />
+          <path d="M4 21c.8-4.4 4-7 8-7s7.2 2.6 8 7Z" />
+        </svg><span>Conta</span></a>
+    </div>
+  </nav>
+
+  <!-- Formulário Principal configurado para redirecionar diretamente -->
+  <form id="reservaForm" class="formulario" action="agendamento-sucesso.html" method="GET">
+    <div class="container">
+      <section class="coluna">
+        <h2>Dados pessoais</h2>
+        <label for="nome">Nome completo</label><input id="nome" type="text" required>
+        <label for="nascimento">Data de nascimento</label><input id="nascimento" type="date" required>
+        <label for="passaporte">CPF / Passaporte</label><input id="passaporte" type="text" required>
+        <label for="nacionalidade">Nacionalidade</label>
+        <select id="nacionalidade" required>
+          <option value="">Selecione</option>
+          <option>Portuguesa</option>
+          <option>Brasileira</option>
+          <option>Angolana</option>
+          <option>Moçambicana</option>
+          <option>Francesa</option>
+          <option>Espanhola</option>
+          <option>Alemã</option>
+        </select>
+        <label for="telemovel">Telemóvel</label>
+        <div class="telefone-container">
+          <select id="codigo-pais">
+            <option>+351</option>
+            <option>+55</option>
+            <option>+34</option>
+          </select>
+          <input id="telemovel" type="tel" placeholder="912345678" required>
+        </div>
+        <label for="email">Email</label><input id="email" type="email" required>
+        <label for="endereco">Endereço</label><input id="endereco" type="text">
+        <label for="numero">N.º / Andar</label><input id="numero" type="text">
+        <label for="codigo-postal">Código postal</label><input id="codigo-postal" type="text">
+        <label for="cidade">Cidade</label><input id="cidade" type="text" required>
+      </section>
+
+      <section class="coluna">
+        <h2>Dados da viagem</h2>
+        <label for="tipo">Tipo de viagem</label><input id="tipo" type="text" placeholder="Ex.: Lazer" required>
+        <label for="destino">Destino</label>
+        <select id="destino" required>
+          <option value="">Selecione</option>
+          <option>Brasil</option>
+          <option>Japão</option>
+          <option>Maldivas</option>
+          <option>França</option>
+          <option>Croácia</option>
+        </select>
+        <label for="data-partida">Data de partida</label><input id="data-partida" type="date" required>
+        <label for="data-chegada">Data de chegada</label><input id="data-chegada" type="date" required>
+        <label for="hora-chegada">Hora de chegada</label><input id="hora-chegada" type="time">
+        <label for="hora-partida">Hora de partida</label><input id="hora-partida" type="time">
+        <label>Passageiros</label>
+        <details class="pax">
+          <summary class="pax-summary">Selecionar passageiros</summary>
+          <div class="pax-box">
+            <div class="pax-row">
+              <span><strong>Adultos</strong><span class="sub"> +18 anos</span></span>
+              <select id="adultos">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="divider"></div>
+            <div class="pax-row">
+              <span><strong>Crianças</strong><span class="sub"> 0 aos 17 anos</span></span>
+              <select id="criancas">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+          </div>
+        </details>
+        <label for="preco-minimo">Preço mínimo (€)</label><input id="preco-minimo" type="number" min="0">
+        <label for="preco-maximo">Preço máximo (€)</label><input id="preco-maximo" type="number" min="0">
+        <label for="observacoes">Observações</label><textarea id="observacoes" rows="4"></textarea>
+      </section>
+
+      <section class="coluna">
+        <h2>Preferências</h2>
+        <label for="classe-voo">Classe do voo</label><input id="classe-voo" type="text" placeholder="Ex.: Económica">
+        <label for="hospedagem">Tipo de hospedagem</label><input id="hospedagem" type="text" placeholder="Hotel, resort, pousada…">
+        <label>Tipo de quarto</label>
+        <div class="bloco-opcoes">
+          <label class="servico"><input type="checkbox" name="quarto" value="Casal">Casal</label>
+          <label class="servico"><input type="checkbox" name="quarto" value="Solteiro">Solteiro</label>
+          <label class="servico"><input type="checkbox" name="quarto" value="Duplo">Duplo</label>
+          <label class="servico"><input type="checkbox" name="quarto" value="Triplo">Triplo</label>
+        </div>
+        <hr>
+        <h2>Extras</h2>
+        <div class="bloco-opcoes">
+          <label class="servico"><input type="checkbox" name="extras" value="Alugar carro">Alugar carro</label>
+          <label class="servico"><input type="checkbox" name="extras" value="Seguro de viagem">Seguro de viagem</label>
+          <label class="servico"><input type="checkbox" name="extras" value="Pequeno-almoço">Pequeno-almoço</label>
+          <label class="servico"><input type="checkbox" name="extras" value="Passeios com guia">Passeios com guia</label>
+        </div>
+
+        <button type="submit" class="btn-agendar" style="margin-top: 20px;">Agendar Viagem</button>
+
+        <p id="mensagem-sessao" style="display: none;">A verificar sessão...</p>
+        <p id="feedback" style="color: red;"></p>
+      </section>
+    </div>
+  </form>
+
+  <footer>
+    <p class="copy">&copy; 2026 — Programação Web (Frontend)</p>
+  </footer>
+
+  <script>
+    if (location.protocol === 'file:') {
+      const feedback = document.getElementById('feedback');
+      if (feedback) {
+        feedback.textContent = 'Abra o projeto através de um servidor local (por exemplo, Live Server). O Firebase não funciona ao abrir o ficheiro diretamente.';
+      }
+    }
+  </script>
+  <script type="module" src="reservas-form.js"></script>
+</body>
+
+</html>
